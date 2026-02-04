@@ -1,0 +1,21 @@
+# uv / Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+uv.lock
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local config  (tokens / memory live here)
+.claude/
