@@ -2,7 +2,7 @@
 
 A Python project template with **uv**, **Jupyter notebooks**, and **Claude Code** — all running inside a GitHub Codespace. No local setup required.
 
-![Open in GitHub Codespaces](https://github.com/codespaces/badge?style=flat-right&logo=codespaces&color=6e40c9&labelColor=fff)](https://codespaces.new/PulfordJ/claudepython)
+![Open in GitHub Codespaces](https://codespaces.new/PulfordJ/claudepython)
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-3572A5?style=flat-right&logo=python&logoColor=fff)
 
 ---
