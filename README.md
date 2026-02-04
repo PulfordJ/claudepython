@@ -2,8 +2,7 @@
 
 A Python project template with **uv**, **Jupyter notebooks**, and **Claude Code** — all running inside a GitHub Codespace. No local setup required.
 
-![Open in GitHub Codespaces](https://codespaces.new/PulfordJ/claudepython)
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3572A5?style=flat-right&logo=python&logoColor=fff)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/PulfordJ/claudepython) ![Python 3.12](https://img.shields.io/badge/Python-3.12-3572A5?style=flat-right&logo=python&logoColor=fff)
 
 ---
 
@@ -64,16 +63,6 @@ uv sync                     # install / update deps from pyproject.toml
 
 Any package added with `uv add` is immediately available in notebooks — the Jupyter kernel points at the same `.venv`.
 
----
-
-## Claude Code auth
-
-Claude Code needs an API key. The cleanest way to provide it in a Codespace:
-
-1. Go to [github.com/settings/codespaces](https://github.com/settings/codespaces)
-2. Add a secret named `ANTHROPIC_API_KEY` with your key from [console.anthropic.com](https://console.anthropic.com/account/keys)
-
-The secret is injected as an environment variable — nothing is stored in the repo.
 
 ---
 
