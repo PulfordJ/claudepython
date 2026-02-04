@@ -3,10 +3,12 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
 
   "features": {
-    // uv package manager
-    "ghcr.io/devcontainers/features/uv:1": {},
-    // Claude Code CLI + persistent ~/.claude volume
+    "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+
+  "remoteEnv": {
+    "UV_LINK_MODE": "copy"
   },
 
   "customizations": {
@@ -19,22 +21,13 @@
         "anthropic.claude-code"
       ],
       "settings": {
-        // Use uv as the package installer everywhere
-        "python.terminal.launchArgs": ["-m"],
         "python.analysis.typeCheckingMode": "basic",
-
-        // Jupyter: point at the uv-managed venv
         "jupyter.notebookLanguage": "python",
         "jupyter.pythonPath": "${workspaceFolder}/.venv/bin/python",
-
-        // Use uv as the default pip tool
         "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
       }
     }
   },
 
-  // After the container is first created:
-  //   1. Create the uv project venv and install deps from pyproject.toml
-  //   2. Install ipykernel into that venv so Jupyter can use it
-  "postCreateCommand": "uv sync && uv pip install ipykernel --python .venv/bin/python"
+  "postCreateCommand": "pip install uv && uv sync && uv pip install ipykernel --python .venv/bin/python"
 }
